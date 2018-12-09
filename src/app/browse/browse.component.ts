@@ -6,18 +6,17 @@ import { Component, OnInit } from "@angular/core";
     templateUrl: "./browse.component.html"
 })
 export class BrowseComponent implements OnInit {
-    icon_x = 50;
-    icon_y = 50;
-    text_x = 100;
-    text_y = 100;
-    label_x = 50;
-    label_y = 200;
-    count = 0; 
+    itemList = [
+        {x:100, y:100, text:' A ‘},
+        {x:60, y:230, text:' B ‘},
+        {x:280, y:300, text:' C ‘},
+        {x:180, y:430, text:' D ‘},
+    ]
 
     constructor() {
         // Use the component constructor to inject providers.
     }
-    ngOnInit(): void {
+     ngOnInit(): void {
         // Use the "ngOnInit" handler to initialize data for the view.
     }
 }
