@@ -7,7 +7,7 @@
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
             <GridLayout rows="100" columns="100, *" [nsRouterLink]="['../item', item.id]">
-                <Image row="0" col="0"></Image>
+                <Image row="0" col="0" [src]="item.src" ></Image>
                 <Label row="0" col="1" [text]="item.name" class="list-group-item"></Label>
             </GridLayout>
         </ng-template>
