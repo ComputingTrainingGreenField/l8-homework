@@ -15,8 +15,25 @@ export class ItemDetailComponent implements OnInit {
         private route: ActivatedRoute
     ) { }
 
+import * as dialogs from "tns-core-modules/ui/dialogs";
+
+
     ngOnInit(): void {
         const id = +this.route.snapshot.params.id;
         this.item = this.data.getItem(id);
+    }
+
+    onTap() {
+        let itemDetail = this;
+        dialogs.action({
+            message: "Choose image for the new item",
+            cancelButtonText: "Cancel",
+            actions: ["Photo", "Camera"]
+        }).then(result => {
+            console.log("Dialog result: " + result);
+            if(result == "Photo"){
+            } else if(result == "Camera") {
+            }
+        });
     }
 }
