@@ -16,7 +16,13 @@ export class BrowseComponent implements OnInit {
     constructor() {
         // Use the component constructor to inject providers.
     }
-     ngOnInit(): void {
+    ngOnInit(): void {
         // Use the "ngOnInit" handler to initialize data for the view.
+    }
+
+    onTouch(event) {
+        if(event.action == 'down') {
+            this.itemList.push({x:event.getX(), y:event.getY(), text: " " + this.itemList.length + " "});
+        }
     }
 }
