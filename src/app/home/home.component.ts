@@ -13,8 +13,9 @@ export class HomeComponent implements OnInit {
     ngOnInit(): void {
         this.items = this.itemService.getItems();
     }
-    onAdd() {
+    onAdd() {
         let newId = this.items.length + 1;
         this.items.push({id: newId, name: "Item " + newId, description: "Description for Item "+newId, src:"http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png"});
+        this.router.navigate(['../item', newId], { relativeTo: this.route});
     }
 }
