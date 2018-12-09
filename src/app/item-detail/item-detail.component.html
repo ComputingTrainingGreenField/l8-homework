@@ -6,5 +6,5 @@
 <StackLayout>
     <TextField [(ngModel)]="item.name" class="input input-border"></TextField>
     <TextField [(ngModel)]="item.description" class="input input-border"></TextField> 
-    <Image [src]="item.src"></Image>
+    <Image [src]="item.src" (tap)="onTap()"></Image>
 </StackLayout>
